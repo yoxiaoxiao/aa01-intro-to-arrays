@@ -6,14 +6,21 @@ Solve this using a loop.
 */
 
 // Your code here 
-
-
-// console.log(hasElement(['a', 'b', 'c', 'e'], 'c')); // true
-// console.log(hasElement(['a', 'b', 'c', 'e'], 'a')); // true
-// console.log(hasElement(['a', 'b', 'c', 'e'], 'z')); // false
-// console.log(hasElement([43, -7, 11, 13], 11));      // true
-// console.log(hasElement([43, -7, 11, 13], 1));       // false
-// console.log(hasElement([], 3));                     // false
+function hasElement(arr, target) {
+    if (arr.length === 0) {
+      return false;
+    }
+    for (let i = 0; i < arr.length; i++) {
+      return arr.includes(target);
+    }
+  }
+  
+  console.log(hasElement(['a', 'b', 'c', 'e'], 'c')); // true
+  console.log(hasElement(['a', 'b', 'c', 'e'], 'a')); // true
+  console.log(hasElement(['a', 'b', 'c', 'e'], 'z')); // false
+  console.log(hasElement([43, -7, 11, 13], 11)); // true
+  console.log(hasElement([43, -7, 11, 13], 1)); // false
+  console.log(hasElement([], 3)); // false
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = hasElement;

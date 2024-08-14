@@ -5,11 +5,17 @@ array is empty, the function should return null.
 */
 
 // Your code here 
-
-
-// console.log(minVal([4, 6, 3, 5, 2, 4])); // 2
-// console.log(minVal([-2, -3, -7, 3 ]));   // -7
-// console.log(minVal([])); //null
+function minVal(arrOfNums) {
+    if (arrOfNums.length === 0) {
+      return null;
+    } else {
+      return Math.min(...arrOfNums);
+    }
+  }
+  
+  console.log(minVal([4, 6, 3, 5, 2, 4])); // 2
+  console.log(minVal([-2, -3, -7, 3])); // -7
+  console.log(minVal([])); //null
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = minVal;

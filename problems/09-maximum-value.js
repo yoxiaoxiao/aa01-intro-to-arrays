@@ -5,11 +5,17 @@ array is empty, the function should return null.
 */
 
 // Your code here 
-
-
-// console.log(maxVal([4, 6, 3, 5, 42, 4])); // 42
-// console.log(maxVal([-2, -3, -7, 3 ]));    // 3
-// console.log(maxVal([]));                  // null
+function maxVal(arrOfNums) {
+    if (arrOfNums.length === 0) {
+      return null;
+    } else {
+      return Math.max(...arrOfNums);
+    }
+  }
+  
+  console.log(maxVal([4, 6, 3, 5, 42, 4])); // 42
+  console.log(maxVal([-2, -3, -7, 3])); // 3
+  console.log(maxVal([])); // null
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = maxVal;
